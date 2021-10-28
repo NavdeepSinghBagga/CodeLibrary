@@ -1,0 +1,55 @@
+//Athani's
+#include <iostream>
+#include<bits/stdc++.h>
+typedef long long int ll;
+using namespace std;
+ 
+#define fastio ios_base::sync_with_stdio(false);cin.tie(nullptr);
+ 
+ 
+int main()
+{
+//   cout << "Hello World" << endl; 
+ 
+    fastio;
+    #ifndef ONLINE_JUDGE
+    // for getting input from input.txt
+    freopen("input.txt", "r", stdin);
+    // for writing output to output.txt
+    freopen("output.txt", "w", stdout);
+    #endif
+ 
+ 
+    ll t,n,i,l,h,a;
+    cin>>t;
+    while(t--){
+        string s;
+        cin>>s;
+        n=s.size();
+        ll arr[n]={0};
+        // ll brr[n]={0};
+        ll m=INT_MAX;
+        for(i=0;i<n;i++){
+            if(s[i]<m)m=s[i];
+        }
+        string one,two;
+        bool f=true;
+        for(i=0;i<n;i++){
+            // cout<<s[i];
+ 
+            if(s[i]==m && f==true){
+                one.push_back(s[i]);
+                f=false;
+            }
+            else two.push_back(s[i]);
+        }
+        cout<<one<<" "<<two<<endl;
+ 
+    }
+    
+    
+    
+ 
+   
+   return 0;
+}
