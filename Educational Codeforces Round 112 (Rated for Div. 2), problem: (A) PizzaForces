@@ -1,0 +1,48 @@
+//Athani's
+#include <iostream>
+#include<bits/stdc++.h>
+typedef long long int ll;
+using namespace std;
+ 
+#define fastio ios_base::sync_with_stdio(false);cin.tie(nullptr);
+void sum(ll *n){
+    cout<<n<<endl;
+    auto t=*n;
+    *n=t*t;
+}
+ 
+int main()
+{
+//   cout << "Hello World" << endl; 
+ 
+    fastio;
+    #ifndef ONLINE_JUDGE
+    // for getting input from input.txt
+    freopen("input.txt", "r", stdin);
+    // for writing output to output.txt
+    freopen("output.txt", "w", stdout);
+    #endif
+ 
+ 
+    ll t,i;
+    cin>>t;
+    while(t--){
+        ll a,b;
+        cin>>a;
+        
+        // cout<<c<<endl;
+        if(a&1)a++;
+        ll c=a*2.5;
+        cout<<max(6ll,a)/2*5<<endl;
+ 
+ 
+ 
+    }
+    // cout<<(float)15/6<<" "<<20/8<<" "<<25/10;
+    // cout<<12*2.5;
+    
+    
+ 
+   
+   return 0;
+}
