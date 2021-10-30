@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+#define max 10000
+#define lld long long int
+int main() {
+	// your code goes here
+	int t,k,p,n,sum,nsum,i;
+	cin>>t;
+	int arr[max],res[t];
+	for(i=0;i<t;i++){
+	    cin>>n>>k;
+	    for(p=0;p<n;p++){
+	        cin>>arr[p];
+	        sum = sum+arr[p];
+	        nsum = nsum+arr[p];
+	        if(arr[p]>k){
+	            nsum = nsum-arr[p]+k;
+	        }
+	        
+	    }
+	   // cout<<endl;
+	    res[i]=sum-nsum;
+	    sum=0;
+	    nsum=0;
+	}
+	for(i=0;i<t;i++){
+	    cout<<res[i]<<endl;
+	}
+
+	return 0;
+}
